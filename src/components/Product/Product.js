@@ -2,7 +2,7 @@ import styles from './Product.module.scss';
 import { useMemo, useState } from 'react';
 import ProductImage from '../ProductImage/ProductImage';
 import ProductForm from '../ProductForm/ProductForm';
-
+import PropTypes from 'prop-types';
 
 
 const Product = props => {
@@ -43,7 +43,7 @@ const Product = props => {
         currentColor={currentColor}
         setCurrentSize={setCurrentSize}
         currentSize={currentSize}
-        testValue={currentSize.name}
+        currentSizeName={currentSize.name}
         order={sendOrder}
         sizes={props.sizes}
         colors={props.colors} />
@@ -54,6 +54,14 @@ const Product = props => {
   )
   
 
+};
+
+Product.propTypes = {
+  colors: PropTypes.array.isRequired,
+  sizes: PropTypes.array.isRequired,
+  basePrice: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default Product;

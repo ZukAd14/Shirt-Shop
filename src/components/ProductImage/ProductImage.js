@@ -1,5 +1,5 @@
 import styles from './ProductImage.module.scss';
-
+import PropTypes from 'prop-types';
 
 const ProductImage = props => {
     
@@ -13,4 +13,9 @@ const ProductImage = props => {
     )
 }
 
+ProductImage.porpTypes = {
+  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+};
 export default ProductImage;

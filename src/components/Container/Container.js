@@ -1,4 +1,5 @@
 import styles from './Container.module.scss';
+import PropTypes from 'prop-types';
 
 const Container = (props) => {
     return (
@@ -8,4 +9,8 @@ const Container = (props) => {
     );
 };
 
+Container.propTypes = {
+    children: PropTypes.array.isRequired,
+
+};
 export default Container;
